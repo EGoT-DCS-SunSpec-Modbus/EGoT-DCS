@@ -1,4 +1,4 @@
-# SunSpec-ModBus
+# Energy Grid of Things - Distributed Control System
 
 ## Debian Buster (OS)_
 The requirements are:
