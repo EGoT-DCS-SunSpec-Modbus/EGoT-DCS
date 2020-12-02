@@ -23,8 +23,8 @@ sudo rm -rf ~/temp
 To configure (must be done first):
 
 ```bash
-mkdir ~/Dev && cd ~/Dev && git clone https://github.com/psu-powerlab/cpp-seed
-cd cpp-seed && cmake -S . -B build
+mkdir ~/Dev && cd ~/Dev && git clone https://github.com/EGoT-DCS-SunSpec-Modbus/EGoT-DCS
+cd EGoT-DCS && cmake -S . -B build
 ```
 
 To build:
@@ -49,25 +49,25 @@ If you wish to develop on a different system that has docker installed I have pr
 
 To build:
 ``` bash
-docker build -f Dockerfile.buster -t cppseed .
+docker build -f Dockerfile.buster -t egot-dcs .
 ```
 
 To run tests:
 
 ```bash
-docker container run -i cppseed
+docker container run -i egot-dcs
 ```
 
 To run app:
 
 ```bash
-docker container run -i cppseed ./build/src/app
+docker container run -i egot-dcs ./build/src/app
 ```
 
 To run and attach terminal for troubleshooting:
 
 ```bash
-docker container run -it cppseed /bin/bash
+docker container run -it egot-dcs /bin/bash
 ```
 
 To cleanup all docker containers, images, and volumnes that are unused:
