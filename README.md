@@ -15,8 +15,6 @@ sudo apt-get update -y \
 cd ~/temp && wget https://github.com/Kitware/CMake/releases/download/v3.18.4/cmake-3.18.4.tar.gz \
   && tar -xf cmake-3.18.4.tar.gz \
   && cd cmake-3.18.4 && ./boostrap && make && sudo make install
-cd ~/temp && git clone https://github.com/apache/xerces-c && cd xerces-c \
-  && cmake -S . -B build && cmake --build build && make -C build && sudo make -C build install
 sudo rm -rf ~/temp
 ```
 
