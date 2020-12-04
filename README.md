@@ -10,7 +10,7 @@ The requirements are:
 
 ```bash
 sudo apt-get update -y \
-  && apt-get install -y build-essential git cmake libboost-all-dev libssl-dev \
+  && apt-get install -y build-essential wget git cmake pkg-config libboost-all-dev libssl-dev libmodbus-dev \
   && mkdir ~/temp
 cd ~/temp && wget https://github.com/Kitware/CMake/releases/download/v3.18.4/cmake-3.18.4.tar.gz \
   && tar -xf cmake-3.18.4.tar.gz \

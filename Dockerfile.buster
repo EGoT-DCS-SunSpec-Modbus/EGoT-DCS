@@ -4,10 +4,16 @@ FROM debian:buster
 # Specify your e-mail address as the maintainer of the container image
 MAINTAINER Tylor Slay "tslay@pdx.edu"
 
+RUN apt-get update -y \
+  && apt-get install -y build-essential wget git cmake pkg-config libboost-all-dev libssl-dev libmodbus-dev \
+  && mkdir ~/temp
+RUN cd ~/temp && wget https://github.com/Kitware/CMake/releases/download/v3.18.4/cmake-3.18.4.tar.gz \
+  && tar -xf cmake-3.18.4.tar.gz \
+  && cd cmake-3.18.4 && cmake . && make && make install
+
 ADD . /app
 WORKDIR /app
 
-RUN apt-get update -y && apt-get install -y build-essential git cmake
-RUN mkdir build && cmake -S . -B build && cmake --build build
+RUN cmake -S . -B build && cmake --build build
 
-CMD ./build/tests/all-tests
+CMD cmake --build build && ./build/tests/all-tests

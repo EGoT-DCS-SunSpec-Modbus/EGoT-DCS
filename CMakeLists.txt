@@ -21,7 +21,6 @@ include(ExternalProject)
 # (But usually don't do this, except maybe for C++ standard)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
-set(BOOST_ENABLE_CMAKE ON)
 #enable_testing() # Must be in main file
 
 # Find packages go here.
