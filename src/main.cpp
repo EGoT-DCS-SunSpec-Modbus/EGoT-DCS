@@ -3,7 +3,7 @@
 #include <map>
 
 #include "SunSpecModbus.h"
-#include "der_control.hpp"
+#include <sep/der_control.hpp>
 
 using namespace std;
 

@@ -39,13 +39,13 @@ FetchContent_Declare(
 )
 
 FetchContent_Declare(
-  ieee_sep
-  GIT_REPOSITORY https://github.com/psu-powerlab/IEEE_2030-5_Resources.git
+  SEP COMPONENT Model
+  GIT_REPOSITORY https://github.com/psu-powerlab/SEP.git
   GIT_TAG        main
 )
 
 # CMake 3.14+
-FetchContent_MakeAvailable(googletest sunspecmodbus ieee_sep)
+FetchContent_MakeAvailable(googletest sunspecmodbus SEP)
 
 # You should usually split this into folders, but this is a simple example
 
