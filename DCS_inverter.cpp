@@ -22,7 +22,7 @@ using namespace std;
 
 int main()
 {
-
+	// test
    void (der_control,ssmb)
    {
    sep::DERControlBase *der_control_base();
