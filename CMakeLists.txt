@@ -39,7 +39,7 @@ FetchContent_Declare(
 )
 
 FetchContent_Declare(
-  SEP COMPONENT Model
+  SEP
   GIT_REPOSITORY https://github.com/psu-powerlab/SEP.git
   GIT_TAG        main
 )
